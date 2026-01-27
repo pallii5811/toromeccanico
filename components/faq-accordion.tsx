@@ -17,6 +17,7 @@ type Props = {
 
 export default function FAQAccordion({ city, whatsappContext }: Props) {
   const [open, setOpen] = useState<number | null>(0)
+  const [query, setQuery] = useState('')
 
   const whatsappHref = useMemo(() => {
     const message = encodeURIComponent(
@@ -44,8 +45,19 @@ export default function FAQAccordion({ city, whatsappContext }: Props) {
     window.open(whatsappHref, '_blank')
   }
 
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase()
+    if (!q) return copy.faq.questions
+    return copy.faq.questions.filter((item) => {
+      return (
+        item.question.toLowerCase().includes(q) ||
+        item.answer.toLowerCase().includes(q)
+      )
+    })
+  }, [query])
+
   return (
-    <section className="section-padding bg-white">
+    <section id="faq" className="section-padding bg-white">
       <div className="container-custom">
         <div className="max-w-3xl">
           <div className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-sm text-gray-700">
@@ -59,8 +71,18 @@ export default function FAQAccordion({ city, whatsappContext }: Props) {
 
         <div className="mt-10 grid lg:grid-cols-12 gap-10 items-start">
           <div className="lg:col-span-7">
+            <div className="mb-4">
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder={copy.faq.searchPlaceholder}
+                className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 shadow-sm focus:outline-none focus:ring-4 focus:ring-cyan-200/40"
+                aria-label={copy.faq.searchPlaceholder}
+              />
+            </div>
+
             <div className="space-y-3">
-              {copy.faq.questions.map((q, idx) => {
+              {filtered.map((q, idx) => {
                 const isOpen = open === idx
                 return (
                   <div
@@ -125,8 +147,9 @@ export default function FAQAccordion({ city, whatsappContext }: Props) {
                   <p className="mt-2 text-sm text-gray-600 leading-relaxed">{copy.faq.sideboxText}</p>
                 </div>
                 <div className="shrink-0">
-                  <div className="grid h-11 w-11 place-items-center rounded-2xl border border-gray-200 bg-white shadow-sm">
-                    <span className="text-sm font-semibold text-gray-900">FE</span>
+                  <div className="relative grid h-11 w-11 place-items-center rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(34,211,238,0.35),transparent_55%),radial-gradient(circle_at_75%_35%,rgba(167,139,250,0.35),transparent_60%)]" />
+                    <span className="relative text-sm font-semibold text-gray-900">FE</span>
                   </div>
                 </div>
               </div>

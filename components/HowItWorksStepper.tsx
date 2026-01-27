@@ -106,7 +106,7 @@ export default function HowItWorksStepper({ onQuoteClick }: Props) {
                                     className={
                                       'grid h-9 w-9 place-items-center rounded-xl border text-sm font-semibold ' +
                                       (isOpen
-                                        ? 'border-emerald-400/40 bg-emerald-400/10 text-emerald-200'
+                                        ? 'border-emerald-400/40 bg-emerald-400/10 text-emerald-200 shadow-[0_0_0_1px_rgba(52,211,153,0.12),0_18px_45px_-26px_rgba(16,185,129,0.85)]'
                                         : 'border-white/15 bg-white/5 text-white/80')
                                     }
                                   >

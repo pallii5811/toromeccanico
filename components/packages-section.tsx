@@ -1,3 +1,5 @@
+import { useMemo, useState } from 'react'
+import { ChevronDown } from 'lucide-react'
 import { copy } from '../copy'
 
 type Props = {
@@ -6,8 +8,15 @@ type Props = {
 }
 
 export default function PackagesSection({ onQuoteClick, onPackageSelect }: Props) {
+  const [openOption, setOpenOption] = useState<string | null>(null)
+
+  const optionDetails = useMemo(() => {
+    const list = copy.packages.optionsDetails ?? []
+    return new Map(list.map((o) => [o.label, o.description]))
+  }, [])
+
   return (
-    <section className="section-padding bg-gray-50">
+    <section id="packages" className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="max-w-3xl">
           <div className="inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1 text-sm text-gray-700">
@@ -78,6 +87,32 @@ export default function PackagesSection({ onQuoteClick, onPackageSelect }: Props
         </div>
 
         <div className="mt-10 rounded-3xl border border-gray-200 bg-white p-6">
+          <div className="text-sm font-semibold text-gray-900">{copy.packages.comparison.title}</div>
+
+          <div className="mt-4 overflow-x-auto">
+            <div className="min-w-[720px]">
+              <div className="grid grid-cols-4 gap-3 text-xs text-gray-500">
+                <div></div>
+                <div className="font-semibold text-gray-900">Base</div>
+                <div className="font-semibold text-gray-900">Pro</div>
+                <div className="font-semibold text-gray-900">Corporate</div>
+              </div>
+
+              <div className="mt-3 space-y-2">
+                {copy.packages.comparison.rows.map((r) => (
+                  <div key={r.label} className="grid grid-cols-4 gap-3 rounded-2xl border border-gray-100 bg-gray-50/60 px-4 py-3">
+                    <div className="text-sm font-semibold text-gray-900">{r.label}</div>
+                    <div className="text-sm text-gray-700">{r.values[0]}</div>
+                    <div className="text-sm text-gray-700">{r.values[1]}</div>
+                    <div className="text-sm text-gray-700">{r.values[2]}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-10 rounded-3xl border border-gray-200 bg-white p-6">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
             <div>
               <div className="text-sm font-semibold text-gray-900">{copy.packages.optionsTitle}</div>
@@ -85,15 +120,37 @@ export default function PackagesSection({ onQuoteClick, onPackageSelect }: Props
             </div>
             <div className="flex flex-wrap gap-2">
               {copy.packages.options.map((o) => (
-                <span
+                <button
                   key={o}
-                  className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-medium text-gray-700"
+                  type="button"
+                  onClick={() => setOpenOption((prev) => (prev === o ? null : o))}
+                  className={
+                    'inline-flex items-center gap-2 rounded-full border bg-gray-50 px-3 py-1 text-xs font-medium transition ' +
+                    (openOption === o
+                      ? 'border-cyan-200 text-gray-900'
+                      : 'border-gray-200 text-gray-700 hover:border-gray-300')
+                  }
+                  aria-expanded={openOption === o}
                 >
                   {o}
-                </span>
+                  <ChevronDown
+                    size={14}
+                    className={
+                      'text-gray-400 transition-transform ' +
+                      (openOption === o ? 'rotate-180' : '')
+                    }
+                    aria-hidden="true"
+                  />
+                </button>
               ))}
             </div>
           </div>
+
+          {openOption && optionDetails.get(openOption) && (
+            <div className="mt-4 rounded-2xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700">
+              {optionDetails.get(openOption)}
+            </div>
+          )}
         </div>
       </div>
     </section>

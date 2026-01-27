@@ -28,8 +28,9 @@ export const copy = {
     title: 'Toro Meccanico Last Man Standing: lo show che fa parlare tutti',
     subtitle:
       'Arriviamo con una gestione completa: montaggio, operatore, ritmo del gioco e sicurezza. Tu ti godi il pubblico che tifa.',
+    proofLine: 'Operatore + sicurezza inclusi. Setup 25–35 min. Lombardia.',
     trailer: {
-      label: 'Trailer: Last Man Standing',
+      label: 'Video: Last Man Standing in azione',
       meta: '0:17',
       hint: 'Foto e video reali li inseriamo alla fine: intanto vedi lo stile.',
     },
@@ -37,6 +38,7 @@ export const copy = {
       whatsapp: 'Scrivi su WhatsApp',
       quote: 'Preventivo in 60 secondi',
     },
+    ctaNote: 'Risposta in 10–30 min (di solito)',
     trustPills: ['Risposta veloce', 'Operatore incluso', 'Assicurazione & sicurezza'],
     perfectFor: 'Perfetto per: Aziende • Sagre • Feste private',
     microTrust: 'Metodo collaudato per eventi privati e aziendali in Lombardia. Foto e video reali su richiesta.',
@@ -205,6 +207,15 @@ export const copy = {
     pricingNote:
       'Il prezzo finale dipende da distanza, durata e giorno. Zero sorprese: te lo diciamo subito.',
     quoteCta: 'Vedi prezzo per la tua data',
+    comparison: {
+      title: 'Cosa cambia',
+      rows: [
+        { label: 'Durata', values: ['2 ore', '4 ore', '8 ore'] },
+        { label: 'Gestione turni / fila', values: ['Inclusa', 'Inclusa (ritmo alto)', 'Inclusa (continuativa)'] },
+        { label: '2° operatore', values: ['Su richiesta', 'Su richiesta', 'Su richiesta'] },
+        { label: 'Branding / extra', values: ['Su richiesta', 'Su richiesta', 'Su richiesta'] },
+      ],
+    },
     plans: [
       {
         name: 'Base',
@@ -246,6 +257,14 @@ export const copy = {
     optionsTitle: 'Opzioni (su richiesta)',
     optionsSubtitle: 'Le aggiungiamo solo se servono davvero al tuo evento.',
     options: ['Ore extra', 'Branding/adesivi', '2° operatore', 'Generatore', 'Premi', 'Musica/MC'],
+    optionsDetails: [
+      { label: 'Ore extra', description: 'Estendiamo la durata in base al flusso pubblico.' },
+      { label: 'Branding/adesivi', description: 'Personalizzazione semplice e pulita (no effetto carnevale).' },
+      { label: '2° operatore', description: 'Utile con pubblico numeroso o turni intensi.' },
+      { label: 'Generatore', description: 'Se non c’è corrente vicina, valutiamo soluzione dedicata.' },
+      { label: 'Premi', description: 'Piccoli premi/medaglie per rendere la sfida più “gara”.' },
+      { label: 'Musica/MC', description: 'Per dare ritmo e chiamata turni senza caos.' },
+    ],
   },
 
   // Gallery
@@ -389,9 +408,10 @@ export const copy = {
     subtitle: 'Se qualcosa non è chiaro, ti rispondiamo al volo su WhatsApp.',
     whatsappCta: 'Se vuoi ti rispondo su WhatsApp',
     whatsappNote: 'Risposta veloce, senza call infinite.',
-    sideboxTitle: 'Supporto rapido (senza call infinite)',
-    sideboxText: 'Se mi scrivi due dettagli, ti dico subito se la location è adatta e che pacchetto ha più senso.',
-    sideboxBullets: ['Risposta veloce su WhatsApp', 'Verifica spazio/corrente in 1 minuto', 'Preventivo chiaro e tempi certi'],
+    searchPlaceholder: 'Cerca: spazio, corrente, meteo…',
+    sideboxTitle: 'Ti risponde il team FuturoEventi',
+    sideboxText: 'Scrivici due dettagli e ti diciamo subito disponibilità e cosa ha più senso per il tuo evento.',
+    sideboxBullets: ['Risposta veloce', 'Preventivo chiaro', 'Zero call infinite'],
     sideboxCta: 'Scrivimi ora su WhatsApp',
     sideboxMeta: 'Di solito rispondiamo in 10–30 min',
     questions: [
