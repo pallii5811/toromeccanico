@@ -54,7 +54,7 @@ const Hero = ({ city, onCityChange, onQuoteClick, whatsappContext }: Props) => {
   return (
     <section
       className="relative min-h-screen flex items-start justify-center overflow-hidden"
-      style={{ paddingTop: 'clamp(22rem, 34vh, 30rem)' }}
+      style={{ paddingTop: 'clamp(24rem, 38vh, 34rem)' }}
     >
       {/* Background Image/Video Placeholder */}
       <div className="absolute inset-0 z-0">
@@ -64,10 +64,16 @@ const Hero = ({ city, onCityChange, onQuoteClick, whatsappContext }: Props) => {
           <img
             src="/hero/futuroeventi-hero.jpg"
             alt="FuturoEventi"
-            className="absolute inset-0 w-full h-full object-cover opacity-25"
+            className="hidden sm:block absolute inset-0 w-full h-full object-cover object-[50%_18%] sm:object-center opacity-30 sm:opacity-25"
             onError={(e) => {
               e.currentTarget.src = '/hero/placeholder-video.jpg';
             }}
+          />
+          <img
+            src="/hero/futuroeventi-hero.jpg"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-contain object-top opacity-25 sm:hidden [mask-image:linear-gradient(to_bottom,black_0%,black_48%,transparent_78%)]"
           />
           <div className="absolute inset-0 fe-grain opacity-30" />
           <div className="absolute inset-0 opacity-35 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.14),transparent_55%)]" />
@@ -112,7 +118,8 @@ const Hero = ({ city, onCityChange, onQuoteClick, whatsappContext }: Props) => {
                 meta={copy.hero.trailer.meta}
                 aspect="21/9"
                 kind="video"
-                src=""
+                src={copy.hero.trailer.src}
+                posterSrc={copy.hero.trailer.posterSrc}
                 className="rounded-3xl"
               />
             </div>

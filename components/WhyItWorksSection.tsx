@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Camera, Sparkles, Target, Users, Zap } from 'lucide-react'
+import Image from 'next/image'
 import { copy } from '../copy'
-import MediaCard from './MediaCard'
 
 type Props = {
   onQuoteClick: () => void
@@ -61,7 +61,7 @@ export default function WhyItWorksSection({ onQuoteClick }: Props) {
                   className={
                     'group relative overflow-hidden rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm backdrop-blur transition ' +
                     'hover:-translate-y-1 hover:shadow-[0_22px_60px_-38px_rgba(0,0,0,0.45)] ' +
-                    (f.size === 'lg' ? 'sm:row-span-2' : '')
+                    ''
                   }
                 >
                   <div className="absolute inset-0 opacity-0 transition group-hover:opacity-100 bg-gradient-to-br from-white/25 via-transparent to-emerald-200/20" />
@@ -86,10 +86,23 @@ export default function WhyItWorksSection({ onQuoteClick }: Props) {
               ))}
             </div>
 
-            <div className="mt-8">
-              <div className="grid sm:grid-cols-3 gap-4">
+            <div className="mt-10">
+              <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-3">
                 {copy.whyItWorksV2.mediaRail.map((m: (typeof copy.whyItWorksV2.mediaRail)[number]) => (
-                  <MediaCard key={m.label} label={m.label} kind={m.kind} src={m.src} />
+                  <div
+                    key={m.label}
+                    className="group relative overflow-hidden rounded-3xl border border-cyan-200/25 bg-white/70 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:border-cyan-200/60 hover:shadow-[0_22px_60px_-38px_rgba(0,0,0,0.45)]"
+                  >
+                    <div className="relative aspect-[4/5] w-full">
+                      <Image src={m.src} alt={m.label} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover" />
+                      <div className="pointer-events-none absolute inset-0 opacity-15 transition group-hover:opacity-100 bg-[radial-gradient(circle_at_18%_22%,rgba(34,211,238,0.22),transparent_48%),radial-gradient(circle_at_72%_32%,rgba(167,139,250,0.18),transparent_52%)]" />
+                    </div>
+                    <div className="absolute inset-x-0 bottom-0 p-4">
+                      <div className="inline-flex items-center rounded-full border border-cyan-200/30 bg-white/85 px-3 py-1 text-xs font-semibold text-gray-900 backdrop-blur">
+                        {m.label}
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>

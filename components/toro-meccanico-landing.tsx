@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useState } from 'react'
+import Image from 'next/image'
 import { copy } from '../copy'
 import Hero from './hero'
 import TopBar from './top-bar'
@@ -60,6 +61,26 @@ export default function ToroMeccanicoLanding() {
       <SocialProofSection />
 
       <HowItWorksStepper onQuoteClick={onQuoteClick} />
+
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-sm text-gray-700">
+              Gallery
+            </div>
+            <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-tight text-gray-900">{copy.gallery.title}</h2>
+            <p className="mt-4 text-lg text-gray-600 leading-relaxed">{copy.gallery.subtitle}</p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {copy.gallery.images.map((img) => (
+              <div key={img.src} className="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 aspect-[4/5]">
+                <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <SafetySection
         city={city}

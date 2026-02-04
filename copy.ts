@@ -28,11 +28,13 @@ export const copy = {
     title: 'Toro Meccanico Last Man Standing: lo show che fa parlare tutti',
     subtitle:
       'Arriviamo con una gestione completa: montaggio, operatore, ritmo del gioco e sicurezza. Tu ti godi il pubblico che tifa.',
-    proofLine: 'Operatore + sicurezza inclusi. Setup 25–35 min. Lombardia.',
+    proofLine: 'Operatore dedicato. Montaggio e smontaggio inclusi. Alimentazione 220V (civile).',
     trailer: {
-      label: 'Video: Last Man Standing in azione',
+      label: 'Video: Toro meccanico in azione',
       meta: '0:17',
       hint: 'Foto e video reali li inseriamo alla fine: intanto vedi lo stile.',
+      src: '/hero/WhatsApp%20Video%202026-01-25%20at%2017.42.41.mp4',
+      posterSrc: '/hero/WhatsApp%20Imagge%202026-01-25%20at%2017.41.24.jpeg',
     },
     cta: {
       whatsapp: 'Scrivi su WhatsApp',
@@ -118,9 +120,21 @@ export const copy = {
       },
     ],
     mediaRail: [
-      { label: 'Evento aziendale', kind: 'video' as const, src: '' },
-      { label: 'Sagra / piazza', kind: 'video' as const, src: '' },
-      { label: 'Festa privata', kind: 'video' as const, src: '' },
+      {
+        label: 'Toro meccanico in azione',
+        kind: 'image' as const,
+        src: '/hero/WhatsApp%20Imagge%202026-01-25%20at%2017.41.24.jpeg',
+      },
+      {
+        label: 'Toro meccanico: dettaglio',
+        kind: 'image' as const,
+        src: '/hero/WhatsApp%20Imagee%202026-01-25%20at%2017.41.23.jpeg',
+      },
+      {
+        label: 'Last Man Standing: arena',
+        kind: 'image' as const,
+        src: '/hero/WhatsApp%20Image%202026-02-02%20at%2023.20.47.jpeg',
+      },
     ],
     microCta: 'Controlla disponibilità in 60 sec',
     microCtaNote: 'Compila due dati e ti diciamo subito disponibilità e prezzo.',
@@ -166,7 +180,8 @@ export const copy = {
     ],
     media: {
       label: 'Video: Last Man Standing in azione',
-      src: '',
+      src: '/hero/WhatsApp%20Video%202026-02-02%20at%2023.21.46.mp4',
+      posterSrc: '/hero/WhatsApp%20Image%202026-02-02%20at%2023.20.47.jpeg',
     },
     microCta: 'Controlla disponibilità',
     steps: [
@@ -205,12 +220,12 @@ export const copy = {
     subtitle: 'Scegli in base a durata e tipo di pubblico. Tutto il resto lo gestiamo noi.',
     highlightBadge: 'Consigliato',
     pricingNote:
-      'Il prezzo finale dipende da distanza, durata e giorno. Zero sorprese: te lo diciamo subito.',
+      'Per le zone non incluse nei pacchetti, il prezzo viene concordato in base a distanza e logistica. Zero sorprese: te lo diciamo subito.',
     quoteCta: 'Vedi prezzo per la tua data',
     comparison: {
       title: 'Cosa cambia',
       rows: [
-        { label: 'Durata', values: ['2 ore', '4 ore', '8 ore'] },
+        { label: 'Durata', values: ['4 ore', '5 ore', 'Su richiesta'] },
         { label: 'Gestione turni / fila', values: ['Inclusa', 'Inclusa (ritmo alto)', 'Inclusa (continuativa)'] },
         { label: '2° operatore', values: ['Su richiesta', 'Su richiesta', 'Su richiesta'] },
         { label: 'Branding / extra', values: ['Su richiesta', 'Su richiesta', 'Su richiesta'] },
@@ -218,38 +233,39 @@ export const copy = {
     },
     plans: [
       {
-        name: 'Base',
-        priceFrom: 'da €299',
-        durationLine: 'Ideale per feste private e piccoli eventi (2 ore)',
+        name: 'Standard',
+        priceFrom: '€400',
+        durationLine: 'Ideale per feste private ed eventi di media durata (4 ore)',
         bullets: [
-          'Toro meccanico + materasso di protezione',
-          'Operatore incluso per tutta la durata',
-          'Montaggio/smontaggio e gestione area',
-          'Assicurazione inclusa (dettagli disponibili)',
+          'Trasporto incluso',
+          'Montaggio e smontaggio inclusi',
+          'Operatore dedicato',
+          'Copertura: Milano, Monza, Como, Lecco, Bergamo, Brescia',
         ],
         highlight: false,
       },
       {
         name: 'Pro',
-        priceFrom: 'da €499',
-        durationLine: 'Perfetto per sagre e pubblico numeroso (4 ore)',
+        priceFrom: '€600',
+        durationLine: 'Per musica e competizione (5 ore)',
         bullets: [
-          'Gestione turni e ritmo “da evento”',
-          'Operatore incluso + briefing iniziale',
-          'Area delimitata e controllo accessi',
-          'Assicurazione inclusa (dettagli disponibili)',
+          'Tutto ciò che è incluso nel pacchetto Standard',
+          'Supervisione extra',
+          'Impianto stereo con musica inclusa',
+          'Organizzazione tornei con velocità selezionate',
+          'Copertura: Milano, Monza, Lecco, Como, Bergamo, Brescia, Piacenza, Sondrio, Cremona',
         ],
         highlight: true,
       },
       {
         name: 'Corporate',
-        priceFrom: 'da €799',
-        durationLine: 'Eventi aziendali, convention, piazze (8 ore)',
+        priceFrom: 'Su richiesta',
+        durationLine: 'Corporate e grandi eventi (preventivo dedicato)',
         bullets: [
-          'Gestione “continua” per tutta la giornata',
-          'Coordinamento con location e staff',
-          'Fattura e tempi certi per aziende',
-          'Assicurazione inclusa (dettagli disponibili)',
+          'Preventivo su misura in base a durata, location e logistica',
+          'Opzione noleggio nazionale (tutte le regioni d’Italia)',
+          'Soluzioni multigiornaliere con prezzo decrescente',
+          'Contattaci per un preventivo personalizzato',
         ],
         highlight: false,
       },
@@ -272,12 +288,11 @@ export const copy = {
     title: 'I Momenti Più Epici',
     subtitle: 'Guarda come rendiamo indimenticabile ogni evento',
     images: [
-      { src: '/gallery/toro-meccanico-milano-1.jpg', alt: 'Toro meccanico evento aziendale Milano' },
-      { src: '/gallery/toro-meccanico-como-1.jpg', alt: 'Toro meccanico festa privata Como' },
-      { src: '/gallery/toro-meccanico-bergamo-1.jpg', alt: 'Toro meccanico sagra Bergamo' },
-      { src: '/gallery/toro-meccanico-milano-2.jpg', alt: 'Toro meccanico team building Milano' },
-      { src: '/gallery/toro-meccanico-como-2.jpg', alt: 'Toro meccanico evento Cernobbio' },
-      { src: '/gallery/toro-meccanico-bergamo-2.jpg', alt: 'Toro meccanico festa Dalmine' },
+      { src: '/hero/WhatsApp%20Image%202026-01-25%20at%2017.41.23.jpeg', alt: 'Toro meccanico in azione' },
+      { src: '/hero/WhatsApp%20Imagee%202026-01-25%20at%2017.41.23.jpeg', alt: 'Toro meccanico: dettaglio attrazione' },
+      { src: '/hero/WhatsApp%20Imagge%202026-01-25%20at%2017.41.24.jpeg', alt: 'Toro meccanico: evento e pubblico' },
+      { src: '/hero/WhatsApp%20Image%202026-02-02%20at%2023.20.47.jpeg', alt: 'Last Man Standing: arena' },
+      { src: '/hero/WhatsApp%20Image%202026-01-25%20at%2017.42.39.jpeg', alt: 'Toro meccanico: scena' },
     ],
   },
 
@@ -358,9 +373,8 @@ export const copy = {
     onSiteBox: {
       title: 'Cosa serve sul posto',
       items: [
-        { label: 'Spazio minimo', value: '6×6 m (consigliato 7×7 m)' },
-        { label: 'Corrente', value: 'Presa 220V standard (16A) entro 20 m' },
-        { label: 'Montaggio', value: '25–35 min (in base alla location)' },
+        { label: 'Ingombro', value: 'Toro Meccanico: 4×4 m • Last Man Standing: 8×8 m (tondo)' },
+        { label: 'Corrente', value: '220V (civile)' },
       ],
     },
     meteoTitle: 'Meteo e sicurezza',
@@ -384,9 +398,8 @@ export const copy = {
     onSite: {
       title: 'Cosa serve sul posto',
       items: [
-        { label: 'Spazio minimo', value: '6×6 m (consigliato 7×7 m)' },
-        { label: 'Corrente', value: 'Presa 220V standard (16A) entro 20 m' },
-        { label: 'Montaggio', value: '25–35 min (in base alla location)' },
+        { label: 'Ingombro', value: 'Toro Meccanico: 4×4 m • Last Man Standing: 8×8 m (tondo)' },
+        { label: 'Corrente', value: '220V (civile)' },
       ],
     },
     meteoTitle: 'Meteo e sicurezza',
@@ -461,8 +474,8 @@ export const copy = {
   // Local
   local: {
     kicker: 'Zone servite',
-    title: 'Milano, Como, Bergamo (e dintorni)',
-    subtitle: 'Ci muoviamo spesso su queste zone: logistica chiara, tempi rapidi, gestione professionale.',
+    title: 'Copertura: Lombardia (e oltre, su richiesta)',
+    subtitle: 'Milano, Monza, Como, Lecco, Bergamo, Brescia. Con il pacchetto Pro anche Piacenza, Sondrio e Cremona. Noleggio nazionale su richiesta.',
     quoteCta: 'Chiedi disponibilità e prezzo',
     whatsappCta: 'WhatsApp veloce',
     cards: [

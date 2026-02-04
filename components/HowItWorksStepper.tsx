@@ -61,6 +61,7 @@ export default function HowItWorksStepper({ onQuoteClick }: Props) {
                 aspect="21/9"
                 kind="video"
                 src={copy.howItWorksV2.media.src}
+                posterSrc={(copy.howItWorksV2.media as any).posterSrc}
                 className="bg-white/5"
               />
 
