@@ -85,8 +85,8 @@ export default function MediaCard({ label, aspect = '16/9', kind = 'video', src,
           </div>
         )}
 
-        {kind === 'video' && (
-          <div className={isVideo ? 'absolute inset-0 grid place-items-center pointer-events-none' : 'absolute inset-0 grid place-items-center'}>
+        {kind === 'video' && !isVideo && (
+          <div className="absolute inset-0 grid place-items-center">
             <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white shadow-sm backdrop-blur transition group-hover:scale-[1.03]">
               <Play size={20} className="translate-x-[1px]" aria-hidden="true" />
             </div>
