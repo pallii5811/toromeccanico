@@ -26,7 +26,7 @@ export const copy = {
 
   // Hero Section
   hero: {
-    title: 'Toro Meccanico Last Man Standing: lo show che fa parlare tutti',
+    title: 'Noleggio Toro Meccanico e Last Man Standing: lo show che fa parlare tutti',
     subtitle:
       'Arriviamo con una gestione completa: montaggio, operatore, ritmo del gioco e sicurezza. Tu ti godi il pubblico che tifa.',
     proofLine: 'Operatore dedicato. Montaggio e smontaggio inclusi. Alimentazione 220V (civile).',

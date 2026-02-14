@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     canonical: '/toro-meccanico',
   },
   openGraph: {
-    title: 'Toro Meccanico Milano | FuturoEventi - Last Man Standing',
+    title: 'Noleggio Toro Meccanico Milano e Lombardia | Prezzi da 400€ - FuturoEventi',
     description:
       'Noleggio toro meccanico professionale a Milano, Como e Bergamo. Servizio completo con operatore e assicurazione.',
     url: 'https://futuroeventi.it/toro-meccanico',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Toro Meccanico Milano | FuturoEventi - Last Man Standing',
+    title: 'Noleggio Toro Meccanico Milano e Lombardia | Prezzi da 400€ - FuturoEventi',
     description:
       'Noleggio toro meccanico professionale a Milano, Como e Bergamo. Operatore incluso, assicurazione completa.',
     images: ['/hero/futuroeventi-hero.jpg'],
@@ -57,6 +57,7 @@ export default function RootLayout({
   return (
     <html lang="it">
       <head>
+        <title>Noleggio Toro Meccanico Milano e Lombardia | Prezzi da 400€ - FuturoEventi</title>
         <link rel="icon" href="/icon" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
