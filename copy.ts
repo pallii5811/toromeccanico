@@ -552,7 +552,7 @@ export const copy = {
 
   // Contact
   contact: {
-    phone: '+39 333 1234567',
+    phone: '+39 350 126 3577',
     whatsapp: '+39 333 1234567',
     email: 'info@futuroeventi.it',
     address: 'Via Milano, 123 - 20121 Milano (MI)',
