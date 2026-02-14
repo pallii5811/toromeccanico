@@ -64,6 +64,8 @@ const Hero = ({ city, onCityChange, onQuoteClick, whatsappContext }: Props) => {
           <img
             src="/hero/futuroeventi-hero.jpg"
             alt="FuturoEventi"
+            width={1920}
+            height={1080}
             className="hidden sm:block absolute inset-0 w-full h-full object-cover object-[50%_18%] sm:object-center opacity-30 sm:opacity-25"
             onError={(e) => {
               e.currentTarget.src = '/hero/placeholder-video.jpg';
@@ -73,6 +75,9 @@ const Hero = ({ city, onCityChange, onQuoteClick, whatsappContext }: Props) => {
             src="/hero/futuroeventi-hero.jpg"
             alt=""
             aria-hidden="true"
+            width={1080}
+            height={1350}
+            loading="lazy"
             className="absolute inset-0 w-full h-full object-contain object-top opacity-25 sm:hidden [mask-image:linear-gradient(to_bottom,black_0%,black_48%,transparent_78%)]"
           />
           <div className="absolute inset-0 fe-grain opacity-30" />

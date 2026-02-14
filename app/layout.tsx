@@ -7,9 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://futuroeventi.it'),
-  title: 'Toro Meccanico Milano | FuturoEventi - Last Man Standing',
+  title: 'Noleggio Toro Meccanico Milano e Lombardia | Prezzi da 400€ - FuturoEventi',
   description:
-    'Noleggio toro meccanico professionale a Milano, Como e Bergamo. Operatore incluso, assicurazione completa. Perfetto per eventi aziendali, feste private e sagre.',
+    'Noleggio Toro Meccanico e Last Man Standing. Operatore incluso, assicurazione RC, montaggio rapido. Serviamo Milano, Bergamo, Brescia, Como. Richiedi preventivo in 1 minuto.',
   keywords:
     'toro meccanico Milano, toro meccanico Como, toro meccanico Bergamo, last man standing, noleggio toro meccanico eventi, toro meccanico eventi aziendali',
   alternates: {

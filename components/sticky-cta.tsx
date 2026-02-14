@@ -50,6 +50,23 @@ const StickyCTA = ({ city, onQuoteClick, whatsappContext }: Props) => {
 
   return (
     <>
+      {/* Mobile WhatsApp Floating CTA */}
+      <AnimatePresence>
+        {isVisible && (
+          <motion.button
+            type="button"
+            initial={{ scale: 0.92, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.92, opacity: 0 }}
+            onClick={handleWhatsAppClick}
+            className="fixed bottom-4 right-4 z-[60] md:hidden inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-2xl shadow-green-500/30 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-200"
+            aria-label="Scrivi su WhatsApp"
+          >
+            <MessageCircle size={24} aria-hidden="true" />
+          </motion.button>
+        )}
+      </AnimatePresence>
+
       {/* Mobile Sticky Bar */}
       <AnimatePresence>
         {isVisible && (

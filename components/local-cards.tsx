@@ -25,7 +25,7 @@ export default function LocalCards({ onQuoteClick }: Props) {
           {copy.local.cards.map((c) => (
             <div key={c.city} className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
               <div className="flex items-center justify-between gap-4">
-                <div className="text-lg font-semibold text-gray-900">{c.title}</div>
+                <h3 className="text-lg font-semibold text-gray-900">{c.title}</h3>
                 <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-medium text-gray-700">
                   <MapPin size={14} />
                   {c.city}

@@ -75,7 +75,14 @@ export default function ToroMeccanicoLanding() {
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {copy.gallery.images.map((img) => (
               <div key={img.src} className="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 aspect-[4/5]">
-                <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>

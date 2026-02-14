@@ -1,8 +1,9 @@
 export const copy = {
   // SEO Meta
   seo: {
-    title: 'Toro Meccanico Milano | FuturoEventi - Last Man Standing',
-    description: 'Noleggio toro meccanico professionale a Milano, Como e Bergamo. Operatore incluso, assicurazione completa. Perfetto per eventi aziendali, feste private e sagre.',
+    title: 'Noleggio Toro Meccanico Milano e Lombardia | Prezzi da 400€ - FuturoEventi',
+    description:
+      'Noleggio Toro Meccanico e Last Man Standing. Operatore incluso, assicurazione RC, montaggio rapido. Serviamo Milano, Bergamo, Brescia, Como. Richiedi preventivo in 1 minuto.',
     keywords: 'toro meccanico Milano, toro meccanico Como, toro meccanico Bergamo, last man standing, noleggio toro meccanico eventi, toro meccanico eventi aziendali',
   },
 
@@ -288,11 +289,11 @@ export const copy = {
     title: 'I Momenti Più Epici',
     subtitle: 'Guarda come rendiamo indimenticabile ogni evento',
     images: [
-      { src: '/hero/WhatsApp%20Image%202026-01-25%20at%2017.41.23.jpeg', alt: 'Toro meccanico in azione' },
-      { src: '/hero/WhatsApp%20Imagee%202026-01-25%20at%2017.41.23.jpeg', alt: 'Toro meccanico: dettaglio attrazione' },
-      { src: '/hero/WhatsApp%20Imagge%202026-01-25%20at%2017.41.24.jpeg', alt: 'Toro meccanico: evento e pubblico' },
-      { src: '/hero/WhatsApp%20Image%202026-02-02%20at%2023.20.47.jpeg', alt: 'Last Man Standing: arena' },
-      { src: '/hero/WhatsApp%20Image%202026-01-25%20at%2017.42.39.jpeg', alt: 'Toro meccanico: scena' },
+      { src: '/hero/WhatsApp%20Image%202026-01-25%20at%2017.41.23.jpeg', alt: 'toro-meccanico-noleggio-festa-milano' },
+      { src: '/hero/WhatsApp%20Imagee%202026-01-25%20at%2017.41.23.jpeg', alt: 'toro-meccanico-professionale-evento-milano-dettaglio' },
+      { src: '/hero/WhatsApp%20Imagge%202026-01-25%20at%2017.41.24.jpeg', alt: 'toro-meccanico-evento-aziendale-milano-pubblico' },
+      { src: '/hero/WhatsApp%20Image%202026-02-02%20at%2023.20.47.jpeg', alt: 'last-man-standing-noleggio-lombardia-arena' },
+      { src: '/hero/WhatsApp%20Image%202026-01-25%20at%2017.42.39.jpeg', alt: 'toro-meccanico-noleggio-sagra-lombardia' },
     ],
   },
 
@@ -482,19 +483,19 @@ export const copy = {
       {
         city: 'Milano',
         title: 'Toro meccanico a Milano',
-        line: 'Per eventi in città, area metropolitana e hinterland: logistica veloce e gestione pulita, senza stress per la location.',
+        line: 'Per eventi in città, area metropolitana e hinterland: logistica veloce e gestione pulita, senza stress per la location. Noleggio attrazioni in provincia di Milano (anche Monza e hinterland) su richiesta.',
         tags: ['Milano', 'Area metropolitana', 'Hinterland (Monza, Rho, Sesto…)'],
       },
       {
         city: 'Como',
         title: 'Toro meccanico a Como',
-        line: 'Ideale per ville e location sul lago: arriviamo con tempi chiari e ci coordiniamo con lo staff per un setup ordinato.',
+        line: 'Ideale per ville e location sul lago: arriviamo con tempi chiari e ci coordiniamo con lo staff per un setup ordinato. Affitto attrazioni e gonfiabili zona Lago di Como (Como, Cernobbio, Moltrasio) su richiesta.',
         tags: ['Como', 'Cernobbio', 'Lago di Como'],
       },
       {
         city: 'Bergamo',
         title: 'Toro meccanico a Bergamo',
-        line: 'Perfetto per sagre, piazze ed eventi aziendali: turni scorrevoli, ritmo alto e sicurezza sotto controllo.',
+        line: 'Perfetto per sagre, piazze ed eventi aziendali: turni scorrevoli, ritmo alto e sicurezza sotto controllo. Noleggio attrazioni per eventi in provincia di Bergamo (Dalmine, Seriate) con operatore incluso.',
         tags: ['Bergamo', 'Dalmine', 'Seriate'],
       },
     ],

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import ToroMeccanicoLanding from '../../components/toro-meccanico-landing'
 import { copy } from '../../copy'
 
@@ -44,6 +45,37 @@ export const metadata: Metadata = {
 export default function ToroMeccanicoPage() {
   const baseUrl = 'https://futuroeventi.it'
 
+  const areaServed = [
+    'Milano',
+    'Monza',
+    'Brescia',
+    'Bergamo',
+    'Como',
+    'Lecco',
+    'Varese',
+    'Lodi',
+    'Pavia',
+    'Cremona',
+    'Sondrio',
+  ].map((name) => ({
+    '@type': 'AdministrativeArea',
+    name,
+  }))
+
+  const offerCatalog = {
+    '@type': 'OfferCatalog',
+    name: 'Pacchetti Toro Meccanico FuturoEventi',
+    itemListElement: copy.packages.plans.map((p) => ({
+      '@type': 'Offer',
+      name: p.name,
+      price: (p.priceFrom || '').replace(/[^0-9]/g, '') || undefined,
+      priceCurrency: 'EUR',
+      url: `${baseUrl}/toro-meccanico#packages`,
+      availability: 'https://schema.org/InStock',
+      description: p.durationLine,
+    })),
+  }
+
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -80,26 +112,25 @@ export default function ToroMeccanicoPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Noleggio Toro Meccanico',
+    name: 'Noleggio Toro Meccanico e Last Man Standing Lombardia',
+    areaServed,
+    priceRange: '€400-€600',
     provider: {
       '@type': 'Organization',
       name: 'FuturoEventi',
       telephone: copy.contact.phone,
       url: `${baseUrl}/toro-meccanico`,
     },
-    areaServed: copy.cities
-      .filter((c) => c.value !== 'Altro')
-      .map((c) => ({
-        '@type': 'AdministrativeArea',
-        name: c.value,
-      })),
-    serviceType: ['Noleggio toro meccanico', 'Animazione eventi', 'Attrazioni eventi'],
+    hasOfferCatalog: offerCatalog,
+    serviceType: ['Noleggio toro meccanico', 'Noleggio last man standing', 'Attrazioni per eventi'],
   }
 
   return (
     <>
-      <script
+      <Script
+        id="structured-data"
         type="application/ld+json"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([localBusinessSchema, serviceSchema, faqSchema]),
         }}
