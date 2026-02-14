@@ -32,7 +32,7 @@ export const copy = {
     trailer: {
       label: 'Video: Toro meccanico in azione',
       meta: '0:17',
-      hint: 'Foto e video reali li inseriamo alla fine: intanto vedi lo stile.',
+      hint: 'Guarda il toro meccanico in azione.',
       src: '/hero/WhatsApp%20Video%202026-01-25%20at%2017.42.41.mp4',
       posterSrc: '/hero/WhatsApp%20Imagge%202026-01-25%20at%2017.41.24.jpeg',
     },
