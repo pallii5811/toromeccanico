@@ -51,7 +51,7 @@ export default function QuoteFormSection({ city, onCityChange, packageName, onCo
     return `https://wa.me/${phone}?text=${text}`
   }, [city, form.city, form.date, form.eventType, packageName])
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     if (!form.name.trim() || !form.phone.trim() || !form.date || !form.eventType) {
@@ -61,7 +61,28 @@ export default function QuoteFormSection({ city, onCityChange, packageName, onCo
 
     setStatus('submitting')
 
-    setTimeout(() => {
+    try {
+      const res = await fetch('/api/quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          city: form.city || city,
+          date: form.date,
+          eventType: form.eventType,
+          notes: form.notes,
+          packageName,
+        }),
+      })
+
+      if (!res.ok) {
+        setStatus('error')
+        return
+      }
+
       trackFormSubmit(form.city || city, {
         name: form.name,
         phone: form.phone,
@@ -69,6 +90,7 @@ export default function QuoteFormSection({ city, onCityChange, packageName, onCo
         date: form.date,
         eventType: form.eventType,
         notes: form.notes,
+        packageName,
       })
 
       setStatus('success')
@@ -77,7 +99,9 @@ export default function QuoteFormSection({ city, onCityChange, packageName, onCo
       setTimeout(() => {
         setStatus('idle')
       }, 4500)
-    }, 700)
+    } catch {
+      setStatus('error')
+    }
   }
 
   const handleWhatsApp = () => {
